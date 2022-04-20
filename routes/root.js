@@ -1,8 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const app = express();
+
+app.set('view engine','ejs')
+
+app.get('/',(req, res) => {
+    res.sendFile('views/index')
+})
 router
     .route("/")
-    .get((req, res) => res.sendFile(path.resolve('views/index.ejs')))
+    .get((req, res) => res.render(path.resolve('views/index.ejs')))
     .post((req, res) => res.send("POST"));
 module.exports = router;
