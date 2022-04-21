@@ -13,7 +13,7 @@ router
     .get((req, res) => res.render(path.resolve('views/personal.ejs')))
     .post((req, res) => res.send("POST"));
 module.exports = router;
-
+/*
 app.post("/personal",(req, res) =>{
         let text="wutang clan aint nothin' to f@$% with"
         let size="100*10"
@@ -23,4 +23,4 @@ app.post("/personal",(req, res) =>{
 
                 })
         })
-})
+})*/
