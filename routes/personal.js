@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require("path");
 const app = express();
 const https = require('https');
+app.use(express.static(__dirname+'/public'))
 
 
 app.get('/personal',(req, res, next) => {
